@@ -77,7 +77,7 @@ namespace wavCap
                         break;
                     case '~':
                         //complement
-                        SS.Push(string.Format("~{0}", getS()));
+                        SS.Push(string.Format("(~{0})", getS()));
                         break;
                     case '[':
                         //increment
@@ -96,14 +96,22 @@ namespace wavCap
                         break;
                     default:
                         //get predefined value
-                        SS.Push(c.ToString().ToUpper());
+                        if (char.IsLetter(c))
+                        {
+                            SS.Push(c.ToString().ToUpper());
+                        }
+                        else
+                        {
+                            //invalid char
+                            SS.Push("#");
+                        }
                         break;
                 }
             }
             string s = getS();
-            if (s.Length > 2)
+            while (s.StartsWith("(") && s.EndsWith(")"))
             {
-                return SS.Count == 0 ? s.Substring(1, s.Length - 2) : s.Substring(1, s.Length - 2) + " STACK NOT EMPTY!";
+                s = s.Substring(1, s.Length - 2);
             }
             return SS.Count==0?s:s + " STACK NOT EMPTY!";
         }
@@ -226,7 +234,13 @@ namespace wavCap
             {
                 return "_";
             }
-            return SS.Pop();
+            string s = SS.Pop();
+            //clean value
+            while (s.StartsWith("((") && s.EndsWith("))"))
+            {
+                s = s.Substring(1, s.Length - 2);
+            }
+            return s;
         }
     }
 }
