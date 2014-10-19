@@ -1,19 +1,40 @@
-﻿using System;
+﻿//uncomment this if you want to keep order of operands.
+//basically adds a shitload of parentheses if commented out
+//#define OOO
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Collections;
 
 namespace wavCap
 {
+    /// <summary>
+    /// provides a crash proof stack language
+    /// </summary>
     public class StackLang
     {
+        /// <summary>
+        /// Stack of integers for regular operation
+        /// </summary>
         private Stack<int> S;
+        /// <summary>
+        /// Stack of string for string building the formula
+        /// </summary>
         private Stack<string> SS;
 
+        /// <summary>
+        /// Initializes the StackLanguage class. (Does nothing)
+        /// </summary>
         public StackLang()
         {
         }
 
+        /// <summary>
+        /// Evaluates code to a formula
+        /// </summary>
+        /// <param name="Code">code</param>
+        /// <returns>maths formula</returns>
         public string eval(string Code)
         {
             SS = new Stack<string>();
@@ -116,6 +137,12 @@ namespace wavCap
             return SS.Count==0?s:s + " STACK NOT EMPTY!";
         }
 
+        /// <summary>
+        /// processes code
+        /// </summary>
+        /// <param name="Code">code to process</param>
+        /// <param name="Vars">variables to pass</param>
+        /// <returns>result</returns>
         public int Process(string Code, string[] Vars)
         {
             S = new Stack<int>();
@@ -209,11 +236,20 @@ namespace wavCap
             return get();
         }
 
+        /// <summary>
+        /// returns a number from the stack or 0 if empty
+        /// </summary>
+        /// <returns>number</returns>
         private int get()
         {
             return get(0);
         }
 
+        /// <summary>
+        /// returns a number from the stack
+        /// </summary>
+        /// <param name="onZeroOrEmpty">Number to return if stack is 0 or empty</param>
+        /// <returns>number</returns>
         private int get(int onZeroOrEmpty)
         {
             if (S.Count == 0)
@@ -228,6 +264,10 @@ namespace wavCap
             return S.Pop();
         }
 
+        /// <summary>
+        /// returns top string element from stack, or _ if empty
+        /// </summary>
+        /// <returns>string</returns>
         private string getS()
         {
             if (SS.Count == 0)
@@ -236,10 +276,12 @@ namespace wavCap
             }
             string s = SS.Pop();
             //clean value
-            while (s.StartsWith("((") && s.EndsWith("))"))
+#if !OOO
+		    while (s.StartsWith("((") && s.EndsWith("))"))
             {
                 s = s.Substring(1, s.Length - 2);
             }
+#endif
             return s;
         }
     }
