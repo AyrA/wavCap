@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "wavCap", "wavCap\wavCap.csproj", "{7F824A1E-5B36-4424-A3E4-B77D334BCEF9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "wavDLL", "wavDLL\wavDLL.csproj", "{6872172E-348F-4ED1-99E7-89E0CE857FA8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mixer", "mixer\mixer.csproj", "{5EEF24AE-E239-4C51-ADEB-0CDD54B1DA1A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7F824A1E-5B36-4424-A3E4-B77D334BCEF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F824A1E-5B36-4424-A3E4-B77D334BCEF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F824A1E-5B36-4424-A3E4-B77D334BCEF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F824A1E-5B36-4424-A3E4-B77D334BCEF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6872172E-348F-4ED1-99E7-89E0CE857FA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6872172E-348F-4ED1-99E7-89E0CE857FA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6872172E-348F-4ED1-99E7-89E0CE857FA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6872172E-348F-4ED1-99E7-89E0CE857FA8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5EEF24AE-E239-4C51-ADEB-0CDD54B1DA1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EEF24AE-E239-4C51-ADEB-0CDD54B1DA1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EEF24AE-E239-4C51-ADEB-0CDD54B1DA1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EEF24AE-E239-4C51-ADEB-0CDD54B1DA1A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
