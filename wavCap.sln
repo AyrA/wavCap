@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "wavDLL", "wavDLL\wavDLL.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mixer", "mixer\mixer.csproj", "{5EEF24AE-E239-4C51-ADEB-0CDD54B1DA1A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "wavDemo", "wavDemo\wavDemo.csproj", "{3D3108EC-11C3-450A-9D3E-0A1714A435C8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +27,10 @@ Global
 		{5EEF24AE-E239-4C51-ADEB-0CDD54B1DA1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5EEF24AE-E239-4C51-ADEB-0CDD54B1DA1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5EEF24AE-E239-4C51-ADEB-0CDD54B1DA1A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D3108EC-11C3-450A-9D3E-0A1714A435C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D3108EC-11C3-450A-9D3E-0A1714A435C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D3108EC-11C3-450A-9D3E-0A1714A435C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D3108EC-11C3-450A-9D3E-0A1714A435C8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

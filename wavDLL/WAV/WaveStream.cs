@@ -69,9 +69,22 @@ namespace WaveLib
 				len--;
 			}
 
+            bool atStart=false;
+            while (!atStart)
+            {
+                string chunk = ReadChunk(Reader);
+                if (chunk != "data")
+                {
+                    m_Stream.Seek(Reader.ReadInt32(), SeekOrigin.Current);
+                }
+                else
+                {
+                    atStart = true;
+                }
+            }
+
 			// assume the data chunk is aligned
-			while(m_Stream.Position < m_Stream.Length && ReadChunk(Reader) != "data")
-				;
+			//while(m_Stream.Position < m_Stream.Length && ReadChunk(Reader) != "data");
 
 			if (m_Stream.Position >= m_Stream.Length)
 				throw new Exception("Invalid file format");
